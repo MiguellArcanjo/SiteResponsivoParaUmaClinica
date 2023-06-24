@@ -1,29 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
 * {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: pink; */
+    padding: 0;
     font-family: 'Source sans pro';
     color: #0000008c;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    padding: 0;
-
-}
-
-html, body {
-    width: 100vw;
 }
 
 .container {
-    /* border: 1px solid red; */
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
-    display: flex;
-    box-sizing: border-box;
+    padding: 0 10px;
 }
 
-header {
+.topo .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+    min-height: 60px;
+    margin: 0 auto;
+}
+
+.topo {
     background-color: aqua;
+    /* width: 100vw; */
+    position: relative;
+    max-width: 100%
 }
 
 .topo img {
@@ -34,78 +42,66 @@ header {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    margin-left: 45px;
+    /* margin-left: 45px; */
+    font-weight: 600;
+    margin-left: 30px;
+    /* padding: 20px; */
 }
 
 .links-topo {
-    margin-left: 10%;
-    width: 1024px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    /* width: 40%; */
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-}
-
-.topo {
-    width: 1024px;
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .links-topo a:hover {
     color: black;
 }
 
-@media (max-width: 425px) {
-    .topo img{
-        height: 100px;
-        width: 150px;
-        margin: 0 auto;
-    }
 
-    .topo {
+@media (max-width: 425px) {
+    .topo .container {
         flex-direction: column;
     }
-
-    .links-topo {
-        justify-content: center;
-    }
-
-    .links-topo a {
-        color: black;
-    }
-
 }
 
 .background {
+    position: relative;
     background-image: url("/img/recepcao.png");
     width: 100%;
-    height: 80vh;
-    background-position: center;
+    height: 500px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.background div {
-    width: 1024px;
-    margin: 0 auto;
+.titulo-container {
+    height: 100%;
+    padding: 10px;
     display: flex;
     align-items: center;
 }
 
 .background div h1{
     text-transform: uppercase;
-    display: flex;
+    font-weight: 500;
+    margin: 0;
+    font-size: 28px;
     color: #fff;
-    font-weight: normal;
-    font-size: 45px;
+
 }
 
 .sobre {
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1024px;
+    /* width: 1024px; */
     margin-top: 30px;
+    /* flex-wrap: wrap; */
+    overflow-x: hidden;
 }
 
 .sub2 img {
@@ -144,12 +140,13 @@ header {
     text-align: center;
 }
 
+
 .horarios {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1024px;
     margin-top: 30px;
+
 }
 
 .sub1 h3 {
@@ -159,6 +156,8 @@ header {
 
 .galeria {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .galeria figure img {
@@ -187,7 +186,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1024px;
     margin-top: 80px;
 }
 
@@ -203,16 +201,21 @@ header {
     width: 100%;
 }
 
+
+
+
+
+
+
+
 footer {
     background-color:rgb(48, 66, 14);
-    width: 100%;
+    color: #fff;
+    padding: 20px;
 }
 
-.container-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+footer .container {
+    text-align: center;
 }
 
 .container-footer img {
