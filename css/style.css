@@ -61,13 +61,6 @@ body {
     color: black;
 }
 
-
-@media (max-width: 425px) {
-    .topo .container {
-        flex-direction: column;
-    }
-}
-
 .background {
     position: relative;
     background-image: url("/img/recepcao.png");
@@ -156,12 +149,12 @@ body {
 
 .galeria {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .galeria figure img {
-    height: 200px;
+    height: 180px;
 }
 
 .galeria figure {
@@ -202,12 +195,6 @@ body {
 }
 
 
-
-
-
-
-
-
 footer {
     background-color:rgb(48, 66, 14);
     color: #fff;
@@ -227,5 +214,45 @@ footer .container {
     color: #fff;
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+    .background {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .background {
+        height: 300px;
+    }
+
+    .medico {
+        display: none;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .topo .container {
+        flex-direction: column;
+    }
+
+    .topo .container img {
+        border-bottom: 1px solid gray;
+    }
+
+    .links-topo {
+        margin-top: 10px;
+    }
+
+    .background {
+        height: 200px;
+    }
+
+    .medico {
+        display: none;
+    }
 }
 
