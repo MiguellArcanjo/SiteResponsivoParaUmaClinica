@@ -1,0 +1,21 @@
+.links-home {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.links-home div a {
+    text-decoration: none;
+    margin: 10px;
+    color: #0000008c;
+    border-bottom: 2px solid aqua;
+    font-weight: 600;
+}
+
+.links-home div a:hover {
+    color: rgb(38, 111, 87);
+}
+
+.links-home h1 {
+    text-align: center;
+}
